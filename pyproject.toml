@@ -1,0 +1,20 @@
+[project]
+name = "pyrewind"
+version = "0.0.1"
+authors = [
+  { name="Francisco Griman", email="grihardware@gmail.com" }
+]
+description = "PyRewind es una poderosa librería de Python diseñada para facilitar la obtención y descarga de videos que han sido eliminados anteriormente en YouTube."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["youtube", "youtube-dl", "video delete", "download", "video"]
+dependencies = ["requests", "bs4", "BeautifulSoup", "PyYAML", "pytube", "tqdm"]
+
+[project.urls]
+"Homepage" = "https://github.com/fcoagz/rewind"
+"Bug Tracker" = "https://github.com/fcoagz/rewind/issues"
