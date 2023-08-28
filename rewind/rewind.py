@@ -2,7 +2,7 @@ from tqdm import tqdm
 import requests
 import os
 
-def get(url: str, title: str = None) -> None:
+def get(url: str, title: str) -> None:
     response = requests.get(url, stream = True)
 
     if not response.status_code == requests.codes.ok:
@@ -17,7 +17,6 @@ def get(url: str, title: str = None) -> None:
         os.makedirs(folder_path)
     
     ext = '.mp4'
-    # next_file_number = len(os.listdir(folder_path)) + 1
     next_file_name = f'{title}{ext}'
 
     progress_bar = tqdm(total = total_size, unit='iB', unit_scale=True, desc=f'[REWIND] - DOWNLOAD VIDEO {title}')
